@@ -1,0 +1,31 @@
+{
+  "name": "jurisdiction",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --open --port 8866",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.0",
+    "axios": "^0.19.2",
+    "better-scroll": "^1.15.2",
+    "core-js": "^2.6.5",
+    "echarts": "^4.2.1",
+    "element-ui": "^2.12.0",
+    "jquery": "^3.5.1",
+    "register-service-worker": "^1.6.2",
+    "vue": "^2.6.10",
+    "vue-echarts": "^4.0.3",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-pwa": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
