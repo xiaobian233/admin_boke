@@ -11,7 +11,13 @@ export class User {
 
   //保存任意数据--路由or权限
   static atWill(name, obj) {
-    localStorage.setItem("user", JSON.stringify(obj));
+    localStorage.setItem(name, JSON.stringify(obj));
+  }
+
+  //获取任意数据
+  static getAll(name, callback = null) {
+    let val = localStorage.getItem(name);
+    if (callback) callback(val);
   }
 }
 
@@ -27,5 +33,14 @@ export class Url {
       obj[arr_param[0]] = arr_param[1];
     }
     return obj;
+  }
+
+  //递归
+  static recursive(arr, dataArr) {
+    arr.map((v) => {
+      if (v.children && v.children.length > 0)
+        return this.recursive(v.children, dataArr);
+      dataArr.push(v);
+    });
   }
 }

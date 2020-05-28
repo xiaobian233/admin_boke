@@ -14,10 +14,10 @@
         </el-row>
         <div class="dv">
             <el-row>
-                <el-col :span="4">
-                    <leftCebian msg="fatherDemo" @myfather="show"></leftCebian>
+                <el-col :span="3">
+                    <navigation msg="fatherDemo" @myfather="show"></navigation>
                 </el-col>
-                <el-col :span="20">
+                <el-col :span="21">
                     <router-view></router-view>
                 </el-col>
             </el-row>
@@ -27,7 +27,7 @@
 
 
 <script>
-    import leftCebian from "../views/leftCebian"
+    import navigation from "../views/navigation"
     import bus from "../main.js";
 
     import { User } from "../assets/js/user.js"

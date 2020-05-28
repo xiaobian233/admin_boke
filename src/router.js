@@ -18,12 +18,12 @@ const router = new Router({
     },
     {
       path: "/index",
-      component: () => import("./views/indexcal.vue"),
+      component: () => import("./views/index.vue"),
       children: [...indexRouterChild]
     },
     {
       path: "/404",
-      component: () => import("./views/d404.vue"),
+      component: () => import("./views/404.vue"),
     },
     {
       path: "*",
