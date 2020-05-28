@@ -3,7 +3,7 @@
         <!-- <h2>this is index</h2> -->
         
         <div class="dv">
-            <el-row>
+            <el-row style="background:radial-gradient(#f0e8e8, transparent)">
                 <el-col :span="3">
                     <navigation></navigation>
                 </el-col>

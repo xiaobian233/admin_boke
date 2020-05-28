@@ -4,7 +4,7 @@
     </div>
 
     </el-radio-group>
-    <el-menu class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" router :collapse="isCollapse"
+    <el-menu class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" router :collapse="isCollapse" background-color="#bacde0"
       :unique-opened="true">
       <el-submenu :index="v.path" v-for="(v,i) in arr" :key="i">
         <template slot="title">

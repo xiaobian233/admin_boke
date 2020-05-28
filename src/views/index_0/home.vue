@@ -1,6 +1,6 @@
 <template lang="">
-    <div>
-        this is  123
+    <div id="home">
+        this is home 
     </div>
 </template>
 
@@ -12,5 +12,5 @@ export default {
 </script>
 
 <style>
-    
+@import url("../../assets/css/views/home.less");
 </style>
