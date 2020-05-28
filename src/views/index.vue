@@ -64,7 +64,7 @@
                 console.log(v, "indexcal");
             }
         },
-        components: { leftCebian }
+        components: { navigation }
     };
 </script>
 
