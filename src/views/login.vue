@@ -37,7 +37,7 @@
 <script>
   import { logins } from "@/api/login/login.js";
   import { domButton, isBoolean } from "../assets/js/jquery.idcode";
-  import { admin_user } from "@/static/axios/index.js";
+  import { admin_login } from "@/static/axios/index.js";
   import { User } from "@/assets/js/user.js";
   export default {
     data() {
@@ -62,7 +62,7 @@
           if (!isBoolean) return this.$message.error("请输入正确的验证码");
           let { name, password } = this.form;
           if (!name || !password) this.$message.error("请输入正确的账户");
-          admin_user("admin_user", { name, password }).then(({ data }) => {
+          admin_login("admin_login", { name, password }).then(({ data }) => {
             User.serUser(data.data);
             if (data.data) this.$router.push({ path: "/index" })
           })

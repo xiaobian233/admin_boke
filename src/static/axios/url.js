@@ -1,6 +1,7 @@
 //静态url地址
 class urls {
-  static admin_user = `/admin/login`;
+  static admin_login = `/admin/login`;
+  static admin_user=`/admin/user`
 }
 
 //代理前缀封装

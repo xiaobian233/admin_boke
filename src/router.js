@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router"; 
+import {indexRouterChild} from "./router/indexChild";
 
 Vue.use(Router);
 
@@ -18,16 +19,7 @@ const router = new Router({
     {
       path: "/index",
       component: () => import("./views/indexcal.vue"),
-      children: [
-        // {
-        //   path:"/user1-1",
-        //   component:()=> import (`./components/user1/user1-1`)
-        // },
-        // {
-        //   path:"/user1-2",
-        //   component:()=> import (`./components/user1/user1-2`)
-        // }
-      ],
+      children: [...indexRouterChild]
     },
     {
       path: "/404",

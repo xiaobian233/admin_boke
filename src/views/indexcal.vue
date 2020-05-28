@@ -28,14 +28,15 @@
 
 <script>
     import leftCebian from "../views/leftCebian"
-    import bus from "../main.js"
+    import bus from "../main.js";
+    import { admin_user } from "@/static/axios/index.js";
     export default {
         data() {
             return {
                 user: {
                     name: "",
                     img: "",
-                    fatherDemo:"demo",
+                    fatherDemo: "demo",
                 },
                 imgs: {
                     backgroundImage: '',
@@ -45,21 +46,23 @@
                 }
             }
         },
-        created(){},
+        // created(){},
         mounted() {
-            // let user=
-            let { name, img } = JSON.parse(sessionStorage.getItem("user"))
-            this.user.name = name.split(":")[1];
-            img=img.split(".")[0]+'.'+img.split(".")[2]
-            this.imgs.backgroundImage ="url("+ require("../assets"+img)+")"; 
+            // let { name, img } = JSON.parse(sessionStorage.getItem("user"))
+            // this.user.name = name.split(":")[1];
+            // img=img.split(".")[0]+'.'+img.split(".")[2]
+            // this.imgs.backgroundImage ="url("+ require("../assets"+img)+")"; 
+            admin_user("admin_user",{userId:"admin"}).then(res => {
+                console.log(res);
+            })
         },
         methods: {
             remove() {
                 sessionStorage.clear();
                 this.$router.push("/login")
             },
-            show(v){
-                console.log(v,"indexcal");
+            show(v) {
+                console.log(v, "indexcal");
             }
         },
         components: { leftCebian }
