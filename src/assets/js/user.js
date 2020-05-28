@@ -5,7 +5,7 @@ export class User {
   }
 
   //保存用户数据--登录保存用户
-  static serUser(obj) {
+  static setUser(obj) {
     localStorage.setItem("user", JSON.stringify(obj));
   }
 

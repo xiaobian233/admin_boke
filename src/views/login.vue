@@ -63,7 +63,7 @@
           let { name, password } = this.form;
           if (!name || !password) this.$message.error("请输入正确的账户");
           admin_login("admin_login", { name, password }).then(({ data }) => {
-            User.serUser(data.data);
+            User.setUser(data.data);
             if (data.data) this.$router.push({ path: "/index" })
           })
         }, 888);

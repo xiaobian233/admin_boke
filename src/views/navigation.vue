@@ -1,5 +1,8 @@
 <template lang="">
   <div id="left_cebian">
+    <div class="biaoti">
+    </div>
+
     </el-radio-group>
     <el-menu class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" router :collapse="isCollapse"
       :unique-opened="true">
@@ -11,6 +14,7 @@
         <el-menu-item :index="val.path" v-for="(val,index) in v.children" :key="index">{{val.name}}</el-menu-item>
       </el-submenu>
     </el-menu>
+
   </div>
 </template>
 
@@ -59,23 +63,5 @@ export default {
 </script>
 
 <style lang="less">
-#left_cebian {
-  height: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-
-  .el-menu-vertical-demo:not(.el-menu--collapse) {
-    // min-height: 400px;
-    height: 100%;
-  }
-
-  .el-menu--collapse {
-    height: 100%;
-  }
-
-  .el-menu-item {
-    min-width: auto;
-  }
-}
+@import url("../assets/css/navigation.less");
 </style>
